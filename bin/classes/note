@@ -1,0 +1,56 @@
+技术难度总结:
+1.高德地图网络定位
+	(1)加入Android_Location_V1.0.4.jar
+	(2)实现AMapLocationListener接口
+	(3)创建LocationManagerProxy对象
+	(4)进行定位请求proxy.requestLocationUpdates(LocationProviderProxy.AMapNetwork,5000,10,this);
+	(5)onLocationChanged(AMapLocation location)核心方法中获得定位的城市
+	(6)在activity中的onPause()方法中移除LocationManagerProxy对象,onDestroy()方法中销毁该对象
+	(7)加入相应的权限
+	(8)具体细节查高德地图官方API
+2.高级控件SliderLayout的使用(幻灯片布局控件),使用开源框架(学会用)
+    (1)创建SliderLayout对象
+    (2)通过HashMap<String, String>准备广告的图片预计广告的标题
+    (3)变量hashMp对象,并创建TextSliderView对象(幻灯片对象),为TextSliderView设置标题以及图片,textSliderView.description(name).image(files.get(name))
+    (4)SliderLayout添加TextSliderView对象(幻灯片对象)
+    (5)设置SliderLayout的相关属性(见具体代码)
+       1.设置广告的样式  2.设置广告指示符的位置  3.设置示符是否显示  4.设置动画描述 5. 设置动画显示周期
+3.高级控件XListView,使用开源框架(学会用)
+    (1)实现IXListViewListener接口,设置XListView的监听事件
+    (2)加载数据,当执行onRefresh()和onLoadMore()方法时,使用handler进行更新,更新完后停止加载和更新
+    (3)设置XListView的相关属性
+4.高级控件SwipeMenuListView实现滑动删除,使用开源框架(学会用)
+	(1)创建SwipeMenuListView对象
+    (2)创建SwipeMenuCreator对象
+    (3)创建SwipeMenuItem对象,设置SwipeMenuItem的相关属性
+    (4)wipeMenuCreator添加菜单项SwipeMenuItem
+    (5)为SwipeMenuListView设置SwipeMenuCreator
+    (6)设置滑动选项点击事件setOnMenuItemClickListener
+    
+5.高级控件KeywordsFlow实现关键字的飞入和飞出效果,(学会用)
+6.重力传感器
+    (1)实现SensorEventListener接口
+    (2)创建传感器管理对象SensorManager
+    (3)在Activity的onResume中进行相应的注册,sensorManager.registerListener(this,sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),SensorManager.SENSOR_DELAY_GAME);
+    (4)onSensorChanged(SensorEvent event)方法中,判断传感器的类型,并进行相应的处理
+7.httpUtils的使用,get请求时注意使用%s进行参数站位,post请求可以进行组装参数(用的很多)
+8.清除缓存,使用递归放在
+    --> SDCard/Android/data/你的应用的包名/files/ 目录，一般放一些长时间保存的数据  
+    --> SDCard/Android/data/你的应用包名/cache/目录，一般存放临时缓存数据
+9.检测更新
+    (1)获得当前的版本号并发送至服务端与服务的版本号进行对比
+       versionCode = context.getPackageManager().getPackageInfo("com.fmt.parttime",0).versionCode;
+    (2)若版本一致则无需更新
+    (3)若版本不同则提示更新
+       1.显示提醒对话框
+       2.当用户点击更新时,开启一个工作线程,使用http协议,到服务端下载新的apk,进下载完后的新版本apk写入sd卡中(使用IO)
+       3.当现在完成后,提醒用户是否更新,使用Intent
+        Intent i = new Intent(Intent.ACTION_VIEW);
+		i.setDataAndType(Uri.parse("file://" + apkfile.toString()), "application/vnd.android.package-archive");
+		mContext.startActivity(i);
+10.检查当前设配是否具有网络,使用ConnectivityManager
+   1.若有则跳转到主页面并实现定位
+   2.若无，则跳转到设置页面，进行网络的设置
+     Intent intent = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+	 startActivity(intent);
+          

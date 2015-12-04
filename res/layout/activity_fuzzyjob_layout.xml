@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/title_Bar">
+        <Button android:id="@+id/back" android:background="@drawable/com_navbar_btn_back_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="onBack" style="@style/padingstyle" />
+        <RelativeLayout android:background="@drawable/com_input_gray" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:layout_toRightOf="@id/back" android:layout_centerVertical="true">
+            <EditText android:textSize="14.0sp" android:textColor="@color/app_white" android:textColorHint="@color/app_white" android:id="@+id/search_text" android:background="@drawable/com_bg_transparent_bg" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="60.0dip" android:hint="@string/fuzzy_search" android:drawableLeft="@drawable/searchbar_icon_search_white" android:drawablePadding="8.0dip" android:layout_centerVertical="true" />
+            <Button android:textSize="14.0sp" android:textColor="@color/app_white" android:id="@+id/search_btn" android:background="@drawable/com_transparentbutton_selector" android:layout_width="60.0dip" android:layout_height="fill_parent" android:text="@string/serch_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="onClick" />
+            <View android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_toLeftOf="@id/search_btn" style="@style/divider_v" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.fmt.keywordsflow.view.KeywordsFlow android:id="@+id/keywordsFlow" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

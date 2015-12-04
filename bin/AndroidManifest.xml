@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fmt.parttime"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+   
+     <!-- 添加使用XUtils的权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 高德地图权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 拨打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 重力传感器权限 -->
+    <uses-permission android:name="android.hardware.sensor.accelerometer"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+          <!-- 添加元数据 -->
+        <meta-data 
+            android:name="com.fmt.api.sdk"
+            android:value="2a6d93b46a7e56092a40578595ad028d"
+            />
+        
+         <activity
+            android:name="com.fmt.parttime.SplashActivity"
+            android:label="@string/app_name" >
+            
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> 
+           
+        </activity>
+        
+        <activity
+            android:name="com.fmt.parttime.ui.users.LoginActivity"
+            android:label="@string/app_name" >
+            
+             <!--  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+           
+        </activity>
+        <activity
+            android:name="com.fmt.parttime.ui.users.RegisterActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+        <activity
+            android:name="com.fmt.parttime.ui.users.HomeActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+        <activity
+            android:name="com.fmt.parttime.ui.users.CollectActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+        <activity
+            android:name="com.fmt.parttime.ui.users.ApplyActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+         <activity
+            android:name="com.fmt.parttime.ui.users.SettingActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+        <activity
+            android:name="com.fmt.parttime.ui.users.ForgetActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+         <activity
+            android:name="com.fmt.parttime.ui.users.ModfiyPwdActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+         <activity
+            android:name="com.fmt.parttime.ui.users.ModfiyPhoneActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+          <activity
+            android:name="com.fmt.parttime.ui.users.FreeBackActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+         <activity
+            android:name="com.fmt.parttime.ui.users.AboutActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+         <activity
+            android:name="com.fmt.parttime.ui.job.JobListActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+         <activity
+            android:name="com.fmt.parttime.ui.job.JobSearchActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+        <activity
+            android:name="com.fmt.parttime.MainActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+         <activity
+            android:name="com.fmt.parttime.ui.job.JobViewActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+       
+        
+    </application>
+
+</manifest>

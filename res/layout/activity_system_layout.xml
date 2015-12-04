@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/title_Bar">
+        <Button android:id="@+id/back" android:background="@drawable/com_navbar_btn_back_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="onBack" style="@style/padingstyle" />
+        <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting" android:layout_centerVertical="true" style="@style/app_title_text" />
+        <ImageView android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/com_loding_white_small" android:layout_toRightOf="@id/title" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/main_container">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+                <RelativeLayout android:visibility="gone" style="@style/settings_module_style">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/notice_sound" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <Button android:background="@drawable/ic_launcher" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:background="@color/app_white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/clean" android:background="@color/app_white" style="@style/settings_module_style">
+                        <TextView android:id="@+id/clean_cache" android:textSize="14.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/clear_cache" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                        <TextView android:textColor="@color/black" android:id="@+id/settings_cache_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="0.00M" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <View android:layout_marginLeft="15.0dip" style="@style/divider" />
+                    <RelativeLayout android:background="@color/app_white" android:layout_marginTop="1.0px" style="@style/settings_module_style">
+                        <Button android:id="@+id/settings_function_introduce" android:text="@string/about" android:drawableRight="@drawable/com_icon_arrow_right" android:onClick="onClick" style="@style/settings_button_style" />
+                    </RelativeLayout>
+                    <View android:layout_marginLeft="15.0dip" style="@style/divider" />
+                  
+                    <View android:layout_marginLeft="15.0dip" style="@style/divider" />
+                    <RelativeLayout android:background="@color/app_white" android:layout_marginTop="1.0px" style="@style/settings_module_style">
+                        <Button android:id="@+id/settings_check_update" android:text="@string/check_update" android:onClick="onClick" style="@style/settings_button_style" />
+                    </RelativeLayout>
+                    <View android:layout_marginLeft="15.0dip" style="@style/divider" />
+                    <RelativeLayout android:background="@color/app_white" android:layout_marginTop="1.0px" style="@style/settings_module_style">
+                        <Button android:id="@+id/settings_user_feedback" android:text="@string/user_feedback" android:drawableRight="@drawable/com_icon_arrow_right" android:onClick="onClick" style="@style/settings_button_style" />
+                    </RelativeLayout>
+                    <RelativeLayout android:background="@color/app_white" android:visibility="gone" style="@style/settings_module_style">
+                        <Button android:id="@+id/settings_share" android:text="@string/share" android:drawableRight="@drawable/com_icon_arrow_right" android:onClick="onClick" style="@style/settings_button_style" />
+                    </RelativeLayout>
+                    <View android:layout_marginLeft="15.0dip" style="@style/divider" />
+                </LinearLayout>
+
+                
+
+                <LinearLayout android:orientation="vertical" android:id="@+id/settings_bottom_container" android:background="@color/app_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+                    <Button android:gravity="left|center" android:id="@+id/settings_remove_login" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_height="48.0dip" android:text="@string/remove_login" android:onClick="onClick" style="@style/settings_exit_button_style" />
+                    <View android:layout_marginLeft="15.0dip" style="@style/divider" />
+
+                    <Button
+                        android:id="@+id/settings_exit"
+                        style="@style/settings_exit_button_style"
+                        android:layout_height="48.0dip"
+                        android:gravity="left|center"
+                        android:onClick="onClick"
+                        android:paddingLeft="16.0dip"
+                        android:paddingRight="16.0dip"
+                        android:text="@string/exit" />
+
+                    <View android:layout_marginLeft="15.0dip" style="@style/divider" />
+                    <Button android:gravity="left|center" android:id="@+id/settings_change_password" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_height="48.0dip" android:text="@string/change_password" android:onClick="onClick" style="@style/settings_exit_button_style" />
+                    <View android:layout_marginLeft="15.0dip" style="@style/divider" />
+                    <Button android:gravity="left|center" android:id="@+id/settings_resetphone" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_height="48.0dip" android:text="@string/changephone" android:onClick="onClick" style="@style/settings_exit_button_style" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

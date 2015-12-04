@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title" style="@style/title_Bar">
+        <Button android:id="@+id/back" android:background="@drawable/com_navbar_btn_back_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="onBack" style="@style/padingstyle" />
+        <TextView android:id="@+id/tt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/likeandcollection" android:layout_centerVertical="true" style="@style/app_title_text" />
+        <Button android:textColor="@drawable/com_textcolor3_selector" android:id="@+id/clean_btn" android:background="@drawable/com_bg_transparent_bg" android:layout_width="56.0dip" android:layout_height="56.0dip" android:text="清空" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baoyz.swipemenulistview.SwipeMenuListView android:id="@+id/collect_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/com_bg_transparent_bg" android:cacheColorHint="#00000000" />
+    </RelativeLayout>
+   
+</LinearLayout>

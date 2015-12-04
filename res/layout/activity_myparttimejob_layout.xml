@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/app_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/title_Bar">
+        <Button android:id="@+id/back" android:background="@drawable/com_navbar_btn_back_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="onBack" style="@style/padingstyle" />
+        <TextView android:id="@id/tt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trace_job" android:layout_centerVertical="true" style="@style/app_title_text" />
+        <ImageView android:id="@+id/smloading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/com_loding_white_small" android:layout_toRightOf="@id/tt" android:layout_centerVertical="true" />
+        <Button android:textColor="@color/app_text_color" android:id="@+id/clean" android:background="@drawable/com_bg_transparent_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/clean" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="onClick" style="@style/app_titlebtn_text" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/app_white" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="47.0dip" android:layout_centerVertical="true">
+            <Button android:textSize="14.0sp" android:textColor="@color/app_title_bg_color" android:layout_gravity="center_vertical" android:id="@+id/prepare_pay" android:background="@drawable/com_bg_transparent_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/job_get_ok" android:layout_weight="1.0" android:onClick="onClick" style="@style/app_title_text" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <Button android:textSize="14.0sp" android:textColor="@color/app_text_second_color" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/already_pay_nocommentary" android:background="@drawable/com_bg_transparent_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/luyong" android:onClick="onClick" style="@style/app_titletip_text" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/ly_count" android:background="@drawable/com_red_round" android:visibility="gone" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:text="0" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <Button android:textSize="14.0sp" android:textColor="@color/app_text_second_color" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/already_pay_commentary" android:background="@drawable/com_bg_transparent_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/refuse" android:onClick="onClick" style="@style/app_titletip_text" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/refuse_count" android:background="@drawable/com_red_round" android:visibility="gone" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:text="0" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- 下划线 -->
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:id="@+id/dot1" android:background="@color/app_title_bg_color2" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_weight="1.0" />
+            <TextView android:id="@+id/dot2" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_weight="1.0" />
+            <TextView android:id="@+id/dot3" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View style="@style/divider" />
+   <!--  <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"> -->
+       <!-- <TextView android:textSize="14.0sp" android:textColor="@color/app_text_second_color" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/empty_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_parttimejob_sq" android:drawableTop="@drawable/com_blank_tips" /> --> 
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+         <!-- <com.baoyz.swipemenulistview.SwipeMenuListView android:id="@+id/job_list" android:background="@color/app_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/com_bg_transparent_bg" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="1.0px" /> -->
+         <com.baoyz.swipemenulistview.SwipeMenuListView android:id="@+id/job_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/com_bg_transparent_bg" android:cacheColorHint="#00000000" />
+    <!-- </FrameLayout> -->
+    	</RelativeLayout>
+</LinearLayout>
